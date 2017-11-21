@@ -13,9 +13,15 @@ class Book
     @title = title
     @authors = authors
     @description = description
+    @@all << [self]
+    binding.pry
     # here is where that code should go
   end
 
+def self.all
+  # puts "you're successfulling calling me"
+  @@all
+end
   #
   # def description
   #   @description
@@ -43,10 +49,6 @@ class Book
 
   def self_printer
     self
-  end
-
-  def self.all
-
   end
 
 end
